@@ -1,0 +1,13 @@
+.navbar {
+    background: #303030;
+    padding: 1rem;
+    width: 100%;
+}
+
+.navbar a {
+    font-size: 1.25rem;
+    color: white;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    pointer-events: none;
+}
