@@ -3,6 +3,7 @@
  *= require_self
  *= require reset
  *= require header
+ *= require body
  */
  @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
  
