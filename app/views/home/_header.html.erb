@@ -2,10 +2,18 @@
     <div class="navdiv">
         <a class="brand">The Stand-Up Blog</a>
         <div class="menu">
-            <%= link_to 'Home', root_path, class:"btn" %>
-            <%= link_to 'Publish', home_publish_path, class:"btn" %>
-            <%= link_to 'About', home_about_path, class:"btn" %>
-            <%= link_to 'Sign in', home_signin_path, class:"btn" %>
+            <%= link_to 'Home', root_path, class:"btn #{cp(root_path)}" %>
+            <% if user_signed_in? %>
+                <%= link_to 'Publish', home_publish_path, class:"btn #{cp(home_publish_path)}" %>
+            <% end %>
+            <%= link_to 'About', home_about_path, class:"btn #{cp(home_about_path)}" %>
+            <% if user_signed_in? %>
+                <%= link_to 'Edit Profile', edit_user_registration_path, class:"btn #{cp(edit_user_registration_path)}" %>
+                <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class:"btn" %>
+            <% else %>
+                <%= link_to 'Sign Up', new_user_registration_path, class:"btn #{cp(new_user_registration_path)}" %>
+                <%= link_to 'Sign In', new_user_session_path, class:"btn #{cp(new_user_session_path)}" %>
+            <% end %>            
         </div>
     </div>
 </div>
