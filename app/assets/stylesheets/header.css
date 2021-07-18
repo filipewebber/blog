@@ -1,13 +1,41 @@
 .navbar {
-    background: #303030;
+    display: block;
     padding: 1rem;
-    width: 100%;
+    background: #303030;
+    -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;    
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    user-select: none;
 }
 
-.navbar a {
+.navbar .navdiv {
+    display: block;
+    padding: 1rem;
+    min-width: 700px;
+    max-width: 1300px;
+    margin: 0 auto 0 auto;
+}
+
+.navbar .navdiv .menu {
+    float: right;
+}
+
+.navbar .brand {
     font-size: 1.25rem;
-    color: white;
+    color: rgba(255, 255, 255, 1);
     font-weight: 400;
-    font-family: 'Roboto', sans-serif;
-    pointer-events: none;
+}
+
+.navdiv .btn {
+    margin-left: 1rem;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 300;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.navdiv .btn:hover {
+    color: rgba(255, 255, 255, 1);
+    transition: 0.5s;
 }

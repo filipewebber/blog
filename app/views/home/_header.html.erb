@@ -1,3 +1,11 @@
 <div class="navbar">
-<a class="brand">The Stand-Up Blog<a>
+    <div class="navdiv">
+        <a class="brand">The Stand-Up Blog</a>
+        <div class="menu">
+            <%= link_to 'Home', root_path, class:"btn" %>
+            <%= link_to 'Publish', home_publish_path, class:"btn" %>
+            <%= link_to 'About us', home_about_path, class:"btn" %>
+            <%= link_to 'Sign in', home_signin_path, class:"btn" %>
+        </div>
+    </div>
 </div>
