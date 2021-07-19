@@ -1,9 +1,11 @@
 module ApplicationHelper
-    def cp(path)
-        if current_page?(path)
-            "current"
+    def cp(path, i)
+        if request.path == path
+            "btn current"
+        elsif request.path == '/users' && i == 1
+            "btn current"
         else
-            "idle"
+            "btn idle"
         end
-    end 
+    end
 end

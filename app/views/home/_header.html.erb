@@ -2,17 +2,17 @@
     <div class="navdiv">
         <a class="brand">The Stand-Up Blog</a>
         <div class="menu">
-            <%= link_to 'Home', root_path, class:"btn #{cp(root_path)}" %>
+            <%= link_to 'Home', root_path, class:cp('/', 0) %>
             <% if user_signed_in? %>
-                <%= link_to 'Publish', home_publish_path, class:"btn #{cp(home_publish_path)}" %>
+                <%= link_to 'Publish', home_publish_path, class:cp('/home/publish', 0) %>
             <% end %>
-            <%= link_to 'About', home_about_path, class:"btn #{cp(home_about_path)}" %>
+            <%= link_to 'About', home_about_path, class:cp('/home/about', 0)%>
             <% if user_signed_in? %>
-                <%= link_to 'Edit Profile', edit_user_registration_path, class:"btn #{cp(edit_user_registration_path)}" %>
-                <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class:"btn" %>
+                <%= link_to 'Edit Profile', edit_user_registration_path, class:cp('/users/edit', 1) %>
+                <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class:cp('/users/sign_out', 0) %>
             <% else %>
-                <%= link_to 'Sign Up', new_user_registration_path, class:"btn #{cp(new_user_registration_path)}" %>
-                <%= link_to 'Sign In', new_user_session_path, class:"btn #{cp(new_user_session_path)}" %>
+                <%= link_to 'Sign Up', new_user_registration_path, class:cp('/users/sign_up', 1) %>
+                <%= link_to 'Sign In', new_user_session_path, class:cp('/users/sign_in', 0) %>
             <% end %>            
         </div>
     </div>
