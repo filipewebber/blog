@@ -29,7 +29,6 @@
 
 .navdiv .btn {
     margin-left: 1rem;
-    color: rgba(255, 255, 255, 0.6);
     font-weight: 300;
     font-size: 1rem;
     text-decoration: none;
@@ -42,4 +41,8 @@
 
 .current {
     color: rgba(255, 255, 255, 1) !important;
+}
+
+.idle {
+    color: rgba(255, 255, 255, 0.6);
 }

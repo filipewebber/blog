@@ -1,5 +1,24 @@
 .main {
     display: flex;
+    flex-direction: column;
     margin: 2rem auto 0 auto;
     width: 900px;    
+}
+
+.alert {
+    text-align: center;
+    background-color: #e74c3c;
+    border-radius: 4px;
+    padding: 1rem;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.notice {
+    text-align: center;
+    background-color: #00bc8c;
+    border-radius: 4px;
+    padding: 1rem;
+    color: white;
+    margin-bottom: 2rem;
 }

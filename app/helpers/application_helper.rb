@@ -1,5 +1,9 @@
 module ApplicationHelper
     def cp(path)
-        "current" if current_page?(path)
-    end
+        if current_page?(path)
+            "current"
+        else
+            "idle"
+        end
+    end 
 end

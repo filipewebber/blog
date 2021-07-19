@@ -13,9 +13,13 @@
   <body>
     <%= render 'home/header' %>
     <div class='main'>
+      <% if notice %>
+        <%= render 'layouts/notice' %>
+      <% end %>
+      <% if alert %>
+        <%= render 'layouts/alert' %>
+      <% end %>
       <%= yield %>
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
     </div>
   </body>
 </html>
