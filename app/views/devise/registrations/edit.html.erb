@@ -22,7 +22,7 @@
       <%= f.password_field :current_password, autocomplete: "current-password", class: 'form-field', placeholder: "Current password" %>
     </div>
 
-    <div class="button">
+    <div class="button button-color1">
       <%= f.submit "Update" %>
     </div>
   </div>
@@ -30,8 +30,10 @@
 
 <div class="delete-account-div">
 <p>Unhappy? 
-  <div class="delete-button">
+  <div class="button button-color3">
     <%= button_to "Delete my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %>
   </div>
 </div>
-<%= link_to "Back", :back %>
+<div class="shared-links-div">
+  <%= link_to "Back", :back %>
+</div>

@@ -29,12 +29,12 @@
     align-items: center;
 }
 
-.button input {
+.button input{
+    margin-top: 0.5rem;
     display: inline-block;
     font-weight: 400;
     line-height: 1.5;
     color: #fff;
-    background-color: #444;
     text-align: center;
     text-decoration: none;
     vertical-align: middle;
@@ -43,15 +43,32 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    border: 1px solid #444;
     padding: 0.375rem 0.75rem;
     font-size: 1rem;
     border-radius: 0.25rem;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-.form-field {
+.button-color1 input{
+    background-color: #375a7f;
+    border: 1px solid #375a7f;
+}
+
+.button-color2 input {
+    background-color: #444;
+    border: 1px solid #444;
+}
+
+.button-color3 input {
+    background-color: #e74c3c;
+    border: 1px solid #e74c3c;
+}
+
+.field {
     margin-bottom: 0.75rem;
+}
+
+.form-field {
     display: block;
     width: 220px;
     padding: 0.375rem 0.75rem;
@@ -71,7 +88,8 @@
 
 .form-field:focus {
     outline: none;
-    box-shadow: 0 0 0 2px rgb(131, 131, 131);
+    box-shadow: 0 0 0 2px #375a7f;
+    border: 1px solid #375a7f;
 }
 
 .delete-account-div {
@@ -81,39 +99,13 @@
     text-align: center;
 }
 
-.delete-button {
-    margin-top: 0.75rem;
-}
-
-.delete-button input {
-    display: inline-block;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #fff;
-    background-color: #e74c3c;
-    text-align: center;
-    text-decoration: none;
-    vertical-align: middle;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    border: 1px solid #e74c3c;
-    padding: 0.375rem 0.75rem;
-    font-size: 1rem;
-    border-radius: 0.25rem;
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-}
-
 .shared-links-div {
     display: block;
-    margin-top: 2rem;
+    margin-top: 3rem;
     text-align: center;
 }
 
 .shared-links-div a {
-    text-decoration: none;
     font: 12px;
     color: black;
 }
