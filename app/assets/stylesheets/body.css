@@ -49,17 +49,17 @@
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-.button-color1 input{
+.posts-table-button-color1, .button-color1 input{
     background-color: #375a7f;
     border: 1px solid #375a7f;
 }
 
-.button-color2 input {
+.posts-table-button-color2, .button-color2 input {
     background-color: #444;
     border: 1px solid #444;
 }
 
-.button-color3 input {
+.posts-table-button-color3, .button-color3 input {
     background-color: #e74c3c;
     border: 1px solid #e74c3c;
 }
@@ -70,7 +70,7 @@
 
 .form-field {
     display: block;
-    width: 220px;
+    width: 250px;
     padding: 0.375rem 0.75rem;
     font-size: 1rem;
     font-weight: 400;
@@ -92,6 +92,16 @@
     border: 1px solid #375a7f;
 }
 
+.form-label {
+    display: inline-block;
+    box-sizing: border-box;
+    margin-bottom: 0.1rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
 .delete-account-div {
     display: block;
     margin-top: 3rem;
@@ -108,4 +118,48 @@
 .shared-links-div a {
     font: 12px;
     color: black;
+}
+
+.posts-table {
+    color: black;
+    overflow: hidden;
+}
+
+.posts-table th {
+    color: white;
+    background-color: #375a7f;
+    padding: 0.75rem;
+}
+
+.posts-table:hover {
+    background-color: #e1eaf5;
+    transition: 0.5s;
+}
+
+.posts-table td {
+    vertical-align: middle;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 0.5rem;
+    max-width: 20rem;
+}
+
+.posts-table-button {
+    display: inline-block;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding: 0.250rem 0.50rem;
+    font-size: 0.66rem;
+    border-radius: 0.17rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
