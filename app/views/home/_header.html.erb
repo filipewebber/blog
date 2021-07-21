@@ -6,7 +6,6 @@
             <% if user_signed_in? %>
                 <%= link_to 'My Posts', posts_path, class:cp('/posts', 2) %>
             <% end %>
-            <%= link_to 'About', home_about_path, class:cp('/home/about', 0)%>
             <% if user_signed_in? %>
                 <%= link_to 'Edit Profile', edit_user_registration_path, class:cp('/users/edit', 1) %>
                 <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class:cp('/users/sign_out', 0) %>

@@ -1,13 +1,6 @@
 class HomeController < ApplicationController
   def index
-  end
-
-  def about
-  end
-
-  def signin
-  end
-
-  def publish
+    @posts = Post.all.sort_by(&:created_at).reverse
+    @users = User.all
   end
 end
