@@ -4,7 +4,7 @@
         <div class="menu">
             <%= link_to 'Home', root_path, class:cp('/', 0) %>
             <% if user_signed_in? %>
-                <%= link_to 'Publish', home_publish_path, class:cp('/home/publish', 0) %>
+                <%= link_to 'My Posts', posts_path, class:cp('/posts', 2) %>
             <% end %>
             <%= link_to 'About', home_about_path, class:cp('/home/about', 0)%>
             <% if user_signed_in? %>
