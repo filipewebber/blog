@@ -11,16 +11,18 @@
 
     <tbody>
       <% @posts.each do |post| %>
-        <tr>
-          <td><%= post.id %></td>
-          <td><%= post.description %></td>
-          <td><%= (post.updated_at).strftime("%b #{post.updated_at.day.ordinalize} %k:%M") %></td>
-          <td>
-            <%= link_to 'Show', post, class:"posts-table-button posts-table-button-color2" %>
-            <%= link_to 'Edit', edit_post_path(post), class:"posts-table-button posts-table-button-color1" %>
-            <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class:"posts-table-button posts-table-button-color3" %>
-          </td>
-        </tr>
+        <% if post.user_id == current_user.id %>
+          <tr>
+            <td><%= post.id %></td>
+            <td><%= post.description %></td>
+            <td><%= (post.updated_at).strftime("%b #{post.updated_at.day.ordinalize} %k:%M") %></td>
+            <td>
+              <%= link_to 'Show', post, class:"posts-table-button posts-table-button-color2" %>
+              <%= link_to 'Edit', edit_post_path(post), class:"posts-table-button posts-table-button-color1" %>
+              <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class:"posts-table-button posts-table-button-color3" %>
+            </td>
+          </tr>
+        <% end %>
       <% end %>
     </tbody>
   </table>
