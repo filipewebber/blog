@@ -1,19 +1,18 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>User:</strong>
-  <%= @post.user_id %>
-</p>
-
-<p>
-  <strong>Url:</strong>
-  <%= @post.url %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @post.description %>
-</p>
-
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+<div class="card">
+	<div class="card-header"><%= @post.title %></div>
+  	<iframe width="560" height="315" src="<%= embed_yt( @post.url ) %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  	<div class="card-details">
+    	<a><%= @post.created_at.strftime("%b #{@post.updated_at.day.ordinalize} %k:%M") %></a>
+    	<a>Posted by: <%= current_user.username %></a>
+  	</div>
+  	<div class="card-description"><%= @post.description %></div>
+  	<div class="card-footer">
+    	<%= show_svg('like.svg') %>
+    	+847483 karma
+    	<%= show_svg('dislike.svg') %>
+  	</div>
+</div>
+<div class="shared-links-div">
+  	<%= link_to 'Edit', edit_post_path(@post) %> |
+  	<%= link_to 'Back', posts_path %>
+</div>
