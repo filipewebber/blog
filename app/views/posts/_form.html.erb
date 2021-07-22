@@ -15,7 +15,10 @@
     <div class="field">
       <%= form.number_field :user_id, id: :post_user_id, class:"form-field", value: current_user.id, type: "hidden" %>
     </div>
-
+    <div class="field">
+      <%= form.label :url, "Title:", class:"form-label" %>
+      <%= form.text_field :title, autofocus: true, id: :title, class:"form-field" %>
+    </div>
     <div class="field">
       <%= form.label :url, "Youtube link:", class:"form-label" %>
       <%= form.text_field :url, id: :post_url, class:"form-field", placeholder: "https://www.youtube.com/watch?v=7W33HRc1A6c" %>

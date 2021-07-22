@@ -1,6 +1,6 @@
 <% @posts.each do |post| %>
     <div class="card">
-        <div class="card-header">Future title goes here</div>
+        <div class="card-header"><%= post.title %></div>
         <iframe width="560" height="315" src="<%= embed_yt( post.url ) %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <div class="card-details">
             <a><%= post.created_at.strftime("%b #{post.updated_at.day.ordinalize} %k:%M") %>
@@ -13,6 +13,10 @@
         <div class="card-description">
             <%= post.description %>
         </div>
-        <div class="card-footer"></div>
+        <div class="card-footer">
+            <%= show_svg('like.svg') %>
+            +847483 karma
+            <%= show_svg('dislike.svg') %>
+        </div>
     </div>
 <% end %>
