@@ -7,10 +7,9 @@
   	</div>
   	<div class="card-description"><%= @post.description %></div>
   	<div class="card-footer">
-    	<%= show_svg('like.svg') %>
-    	+847483 karma
-    	<%= show_svg('dislike.svg') %>
-  	</div>
+			<%= render 'home/like', post: @post %>	
+			<%= render 'home/total_likes', post: @post %>			
+	</div>
 </div>
 <div class="shared-links-div">
   	<%= link_to 'Edit', edit_post_path(@post) %> |

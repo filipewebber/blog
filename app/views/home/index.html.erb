@@ -6,17 +6,16 @@
         	<a><%= post.created_at.strftime("%b #{post.updated_at.day.ordinalize} %k:%M") %></a>
         	<a>Posted by:
         	<% @users.each do |user| %>
-        	<%= user.username if user.id == post.user_id %>
+        		<%= user.username if user.id == post.user_id %>
         	<% end %>
         	</a>
     	</div>
     	<div class="card-description">
-    		<%= post.description %>
+			<%= post.description %>
     	</div>
 		<div class="card-footer">
-			<%= show_svg('like.svg') %>
-			+847483 karma
-			<%= show_svg('dislike.svg') %>
+			<%= render 'home/like', post: post %>	
+			<%= render 'home/total_likes', post: post %>			
 		</div>
 	</div>
 <% end %>

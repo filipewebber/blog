@@ -88,9 +88,10 @@
 }
 
 .card-footer {
+    background-color: #ffffff8e;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: start;
     background-color: rgb(68, 68, 68);
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
@@ -104,11 +105,21 @@
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
-    overflow-wrap: break-word;
     padding-bottom: 8px;
     padding-left: 16px;
     padding-right: 16px;
     padding-top: 8px;
+    align-items: center;
+}
+
+.card-footer-icon img {
+    display:block;
+    width: 27px;
+    height: 27px;
+}
+
+.card-footer-total-likes {
+    padding-left: 1rem;
 }
 
 .notice {

@@ -1,0 +1,9 @@
+<div class="card-footer-total-likes">
+    <% total = 0 %>
+    <% @likes.each do |like| %>
+        <% if like.post_id == post.id %>
+            <% total += 1 %>
+        <% end %>
+    <% end %>
+    <%= total %>
+</div>
